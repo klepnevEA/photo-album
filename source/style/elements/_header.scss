@@ -1,0 +1,218 @@
+.header {
+  width: 100%;
+  height:300px;
+  background-image: url('../img/test-bg_main.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  &-block {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+  }
+}
+
+.user {
+  width:70%;
+  height:240px;
+  display:flex;
+  box-sizing:border-box;
+
+  &__logo {
+    margin:58px 0 0 90px;
+    width:124px;
+    min-width:124px;
+    height:124px;
+    background-image: url('../img/default_avatar.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius:50%;
+  }
+
+  &__title {
+    margin:58px 0 0 50px;
+  }
+
+  &__name {
+    font-family: 'Panton', Arial, sans-serif;
+    font-size:21px;
+    line-height:21px;
+    color:#fff;
+    margin-bottom:10px;
+  }
+
+  &__desc {
+    font-family: 'Proxima Nova Lt', Arial, sans-serif;
+    font-size:16px;
+    line-height:24px;
+    color:#fff;
+  }
+}
+
+.social {
+  margin-top:20px;
+
+  &__list {
+    padding:0;
+    margin:0;
+  }
+
+  &__item {
+    display:inline-block;
+    list-style-type:none;
+    margin-right:5px;
+
+    &:last-child {
+      margin-right:0;
+    }
+  }
+
+  &__link {
+    display:inline-block;
+    height:21px;
+    width:21px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity:0.8;
+
+    &:hover {
+      opacity:1.0;
+    }
+    &_vk {
+      background-image: url('../img/soc_vk.svg');
+    }
+    &_fb {
+      background-image: url('../img/soc_fb.svg');
+    }
+    &_twitter {
+      background-image: url('../img/soc_twitter.svg');
+    }
+    &_google {
+      background-image: url('../img/social_google.svg');
+    }
+    &_email {
+      background-image: url('../img/soc_email.svg');
+    }
+  }
+}
+
+.menu {
+  width:30%;
+  height:240px;
+  text-align:right;
+  padding:20px 40px 0 0;
+  box-sizing:border-box;
+
+  &__button {
+    background-color:#fff;
+    box-shadow:1px 2px 2px rgba(0, 0, 0, 0.2);
+    display:inline-block;
+    border-radius:25px 25px 25px 25px;
+    font-size:0;
+    margin-bottom:10px;
+    overflow: hidden;
+
+    &:hover {
+      background-color:#28bbf0;
+      padding-right:10px;
+    }
+
+    &:hover .menu__text {
+      width:100px;
+    }
+
+    &:hover .menu__button-edit {
+      background-image: url('../img/edit_white.svg');
+    }
+
+    &:hover .menu__button-logout {
+      background-image: url('../img/off_white.svg');
+    }
+
+    &-edit {
+      height: 38px;
+      width:38px;
+      background-size:60% 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../img/edit_gray.svg');
+      display:inline-block;
+      border-radius:50%;
+      vertical-align:middle;
+    }
+
+    &-logout {
+      height: 38px;
+      width:38px;
+      background-size:60% 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../img/off_gray.svg');
+      display:inline-block;
+      border-radius:50%;
+      vertical-align:middle;
+    }
+  }
+
+  &__text {
+    display:inline-block;
+    line-height:40px;
+    font-family: 'Panton', Arial, sans-serif;
+    font-size:14px;
+    vertical-align:middle;
+    width:0;
+    transition: width 0.3s;
+    color:#fff;
+    overflow: hidden;
+  }
+
+}
+
+.search {
+  width:100%;
+  height:60px;
+  background-color:rgba(255,255,255,0.9);
+  text-align:right;
+
+  &__form {
+    margin-top:10px;
+    display:inline-block;
+  }
+
+  &__block {
+    font-size:0;
+  }
+
+  &__icon {
+    display:inline-block;
+    height:40px;
+    width:45px;
+    background-color:#fff;
+    background-size:50% 50%;
+    background-position: 60% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../img/search.svg');
+    vertical-align: middle;
+    border-radius:25px 0 0 25px;
+
+  }
+
+  &__input {
+    width:380px;
+    font-family: 'Proxima Nova Lt', Arial, sans-serif;
+    font-size:16px;
+    line-height:21px;
+    color:#323232;
+    display:inline-block;
+    padding:0;
+    border:0;
+    height:40px;
+    border-radius:0 25px 25px 0;
+    vertical-align: middle;
+    margin-right:60px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

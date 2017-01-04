@@ -23,8 +23,8 @@ module.exports = function() {
             sprite: "../sprite.svg",
             render: {
               scss: {
-                dest:'../../style/_misc/_sprite.scss',
-                template: './source/style/_misc/_sprite-template.scss'
+                dest:'../../style/common/_sprite.scss',
+                template: './source/style/common/_sprite-template.scss'
               }
             }
           }

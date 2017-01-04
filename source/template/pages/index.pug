@@ -1,6 +1,9 @@
 extends ../_template
 
 block variables
-  - var title = 'Добро пожаловать!'
+  - var title = 'Главная страница'
 
 block content
+    include ../_blocks/_header
+    include ../_blocks/_main_block
+    include ../_blocks/_footer
