@@ -1,0 +1,10 @@
+.welcome-footer {
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 30px;
+	z-index: 10;
+}
+
+.welcome-footer__copyright {
+	@include font(16px, 24px, $lightColor, normal);
+}
