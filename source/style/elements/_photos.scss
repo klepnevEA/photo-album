@@ -1,4 +1,4 @@
-.new-content {
+.photos {
   width:100%;
   padding:60px 60px 40px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@
     position:relative;
     cursor:pointer;
 
-    &:hover .new-content__image-loupe {
+    &:hover .photos__image-loupe {
       animation: bounceIn 0.4s forwards ease-in-out;;
     }
 
@@ -84,6 +84,13 @@
     display: inline-block;
     margin:10px 0 20px 0;
 
+    &--album {
+      margin:0;
+      position:absolute;
+      left:20px;
+      bottom:20px;
+    }
+
     &-text {
       font-family: 'Panton', Arial, sans-serif;
       font-size:16px;
@@ -92,6 +99,10 @@
       display:inline-block;
       vertical-align: middle;
       margin-left:5px;
+
+      &--white {
+        color:#fff;
+      }
     }
 
     &-icon {
@@ -106,45 +117,76 @@
 
       &_comments {
         background-image: url('../img/comments.svg');
+        &--white {
+          opacity:1;
+          background-image: url('../img/comments_white.svg');
+        }
       }
 
       &_likes {
         background-image: url('../img/like.svg');
         margin-left: 15px;
+        &--white {
+          margin-left: 15px;
+          opacity:1;
+          background-image: url('../img/like_white.svg');
+        }
       }
     }
   }
 
-  &__album {
+  &__footer {
     background-color:#f6f6f6;
     width:100%;
     height:40px;
-    text-align:right;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+
+    &--album {
+      justify-content: space-between;
+    }
 
     &-icon {
-      display:inline-block;
+      display:block;
       height:18px;
       width:20px;
       background-size:cover;
       background-position: center;
       background-repeat: no-repeat;
       background-image: url('../img/album.svg');
-      vertical-align: middle;
       opacity:0.15;
     }
 
     &-text {
-      display:inline-block;
+      display:block;
       font-family: 'Proxima Nova Semibold', Arial, sans-serif;
       font-size:16px;
       line-height:40px;
       color:#323232;
-      vertical-align: middle;
       margin:0 20px 0 10px;
     }
   }
 
+  &__edit-icon {
+    display:inline-block;
+    height:20px;
+    width:20px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/edit.svg');
+    vertical-align:middle;
+    opacity:0.15;
+    cursor:pointer;
+    margin-left:15px;
+
+    &:hover {
+      opacity:0.5;
+    }
+  }
 }
+
 
 .page-button {
   display:block;
