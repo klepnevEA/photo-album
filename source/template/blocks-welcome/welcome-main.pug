@@ -1,0 +1,36 @@
+section.welcome
+	.welcome__flipper
+		.welcome__front
+			header.welcome-header
+				h1.h1.welcome-header__h1 Добро пожаловать
+				h3.h3.welcome-header__h3 Перед вами сервис, который поможет вам организовать свои фотографии в альбомы и поделиться ими со всем миром!
+			.welcome__form-wrapper
+				form.login-form
+					.login-form__input-wrap
+						.login-form__input-before.login-form__input-before--email
+						input.login-form__input-text(type="text" name="email" placeholder="Электронная почта")
+					.login-form__input-wrap
+						.login-form__input-before.login-form__input-before--password
+						input.login-form__input-text(type="text" name="password" placeholder="Пароль")
+					.login-form__links-wrap
+						a.login-form__link(href="/forget.html") Забыли пароль?
+						a#submitLogin.login-form__button(href="#") Войти
+						p.login-form__text Нет аккаунта? #[a#flipToRegistration.login-form__link(href="/registration.html") Зарегиcтрироваться]
+		.welcome__back
+			header.welcome-header
+				h2.h1.welcome-header__h1 Регистрация
+			.welcome__form-wrapper
+				form.login-form
+					.login-form__input-wrap
+						.login-form__input-before.login-form__input-before--name
+						input.login-form__input-text(type="text" name="username" placeholder="Имя")
+					.login-form__input-wrap
+						.login-form__input-before.login-form__input-before--email
+						input.login-form__input-text(type="text" name="email" placeholder="Электронная почта")
+					.login-form__input-wrap
+						.login-form__input-before.login-form__input-before--password
+						input.login-form__input-text(type="text" name="password" placeholder="Пароль")
+					.login-form__links-wrap
+						p.login-form__text Ваши данные остаются строго конфиденциальны
+						a#submitRegistration.login-form__button(href="#") Создать аккаунт
+						p.login-form__text Уже зарегистрированы? #[a#flipToLogin.login-form__link(href="/welcome.html") Войти]

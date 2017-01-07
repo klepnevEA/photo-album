@@ -1,0 +1,12 @@
+section.welcome
+	.welcome__form-wrapper
+		.login-form__links-wrap
+			h3.welcome__h3 Забыли пароль?
+			p.login-form__text Ничего страшного, введите свой e-mail, и мы вышлем вам инструкции по восстановлению пароля
+		form.login-form
+			.login-form__input-wrap
+				.login-form__input-before.login-form__input-before--email
+				input.login-form__input-text(type="text" name="email" placeholder="Электронная почта")
+			.login-form__links-wrap
+				a#passwordRestore.login-form__button(href="#") Восстановить пароль
+				p.login-form__text Вспомнили пароль? #[a.login-form__link(href="/welcome.html") Войти]

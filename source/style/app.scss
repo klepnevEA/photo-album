@@ -1,13 +1,12 @@
-
+// fonts
 @import "fonts/font-awesome/font-awesome";
 @import "fonts/panton";
 @import "fonts/proximanova";
 
-@import "common/_layout";
+// common
+@import "common/mixins";
+@import "common/variables";
+@import "common/layout";
 
-@import "elements/_header";
-@import "elements/_photos";
-@import "elements/_albums";
-@import "elements/_footer";
-
-
+// elements
+@import "elements/**/*.scss";

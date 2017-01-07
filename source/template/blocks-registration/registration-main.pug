@@ -1,0 +1,16 @@
+section.welcome
+	.welcome__form-wrapper
+		form.login-form
+			.login-form__input-wrap
+				.login-form__input-before.login-form__input-before--name
+				input.login-form__input-text(type="text" name="username" placeholder="Имя")
+			.login-form__input-wrap
+				.login-form__input-before.login-form__input-before--email
+				input.login-form__input-text(type="text" name="email" placeholder="Электронная почта")
+			.login-form__input-wrap
+				.login-form__input-before.login-form__input-before--password
+				input.login-form__input-text(type="text" name="password" placeholder="Пароль")
+			.login-form__links-wrap
+				p.login-form__text Ваши данные остаются строго конфиденциальны
+				a#submitRegistration.login-form__button(href="#") Создать аккаунт
+				p.login-form__text Уже зарегистрированы? #[a.login-form__link(href="/welcome.html") Войти]
