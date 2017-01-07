@@ -235,10 +235,22 @@
 .user-mini {
   margin:20px 0 0 90px;
   font-size:0;
+
+  &--photo {
+    margin:0;
+  }
+
+  &--comments {
+    margin:0 0 0 70px;
+    display:flex;
+
+  }
+
     &__logo {
       display:inline-block;
       height:55px;
       width:55px;
+      min-width:55px;
       background-size:cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -255,6 +267,10 @@
       line-height:21px;
       color:#fff;
       vertical-align: middle;
+
+      &--photo {
+        color:#343434;
+      }
     }
 }
 
@@ -320,7 +336,3 @@
     vertical-align: middle;
   }
 }
-
-
-
-
