@@ -1,0 +1,10 @@
+extends ../_template
+
+block variables
+	- var title = 'Восстановление пароля'
+
+block content
+	.welcome-wrapper.welcome-wrapper--forget
+		include ../blocks-forget/forget-header.pug
+		include ../blocks-forget/forget-main.pug
+		include ../blocks-welcome/welcome-footer.pug

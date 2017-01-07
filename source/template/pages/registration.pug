@@ -1,0 +1,10 @@
+extends ../_template
+
+block variables
+	- var title = 'Добро пожаловать!'
+
+block content
+	.welcome-wrapper.welcome-wrapper--registration
+		include ../blocks-registration/registration-header.pug
+		include ../blocks-registration/registration-main.pug
+		include ../blocks-welcome/welcome-footer.pug
