@@ -1,0 +1,58 @@
+.button {
+	height: 40px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	color: $lightColor;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.button--confirm {
+	background-color: $blueColor;
+}
+
+.button--cancel {
+	color: $blueColor;
+	padding: 0;
+	height: auto;
+	margin: 10px 20px;
+}
+
+.button--red {
+	background-color: $redColor;
+}
+
+.button--delete {
+	background-color: $redColor;
+
+	&:before {
+		content: '\e907';
+		font-family: icomoon;
+		margin-right: 10px;
+	}
+
+}
+
+.button--like {
+	background-color: $redColor;
+
+	&:before {
+		content: '\e910';
+		font-family: icomoon;
+		margin-right: 5px;
+	}
+}
+
+.button--add,
+.button--close,
+.button--more {
+	color: $blueColor;
+	border: 1px solid $blueColor;
+
+	&:hover {
+		color: $lightColor;
+		background-color: $blueColor;
+		border: 1px solid $blueColor;
+	}
+
+}
