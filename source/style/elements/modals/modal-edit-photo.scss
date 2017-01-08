@@ -1,0 +1,46 @@
+// Спрятать элементы
+.photo-delete {
+	// display: none;
+}
+
+.photo-edit {
+	padding: 20px 0 0 0;
+}
+
+.modal__form-row {
+	margin: 0 0 20px 0;
+	display: flex;
+	justify-content: flex-end;
+
+	.modal__label {
+		flex: 1;
+		text-align: right;
+		margin-right: 20px;
+	}
+
+}
+
+.modal__input-text,
+.modal__input-textarea {
+	flex: 5;
+	border-radius: 20px;
+}
+
+.modal__input-textarea {
+	resize: none;
+}
+
+.modal__text {
+	margin: 0;
+	padding: 0;
+}
+
+.photo-delete {
+	padding: 20px 0;
+	text-align: center;
+
+	.modal__text {
+		margin-bottom: 20px;
+	}
+
+}

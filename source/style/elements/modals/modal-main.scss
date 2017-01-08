@@ -1,0 +1,61 @@
+// Спрятать элементы
+.dropzone__files {
+	// display: none;
+}
+.modal__error {
+	// display: none;
+}
+
+
+.modal {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(255,255,255,.5);
+    z-index: 10000;
+    padding: 50px 0;
+    transition: opacity .3s;
+}
+
+.modal__content {
+	width: 90%;
+	max-width: 680px;
+	margin: 0 auto;
+	position: relative;
+	background-color: $lightColor;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.modal__header {
+	width: 100%;
+	height: 70px;
+	width: 100%;
+	height: 70px;
+	padding: 0 20px;
+	background-color: $bgLightColor;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+}
+
+.modal__close {
+	text-decoration: none;
+	color: $grayColor;
+	font-size: 25px;
+}
+
+.modal__main {
+	padding: 20px;
+}
+
+.modal__footer {
+	@extend .modal__header;
+    justify-content: flex-start;
+}
+.modal__footer-link-wrapper {
+	flex: 1;
+	text-align: right;
+}
