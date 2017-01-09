@@ -51,6 +51,7 @@
 		font-family: icomoon;
 		margin-right: 5px;
 	}
+
 }
 
 .button--add,
@@ -64,6 +65,55 @@
 		color: $lightColor;
 		background-color: $blueColor;
 		border: 1px solid $blueColor;
+	}
+
+}
+
+.button--menu {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: $lightColor;
+	border-radius: 20px;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+	padding: 0 10px;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		font-family: icomoon;
+		color: $grayColor;
+		font-size: 20px;
+		display: inline-block;
+		width: 20px;
+		text-align: center;
+		position: absolute;
+		left: 10px;
+	}
+
+	&:hover {
+		background-color: $blueColor;
+		width: auto;
+		padding-left: 40px;
+
+		&:before {
+			color: $lightColor;
+		}
+
+	}
+
+	&.button--home {
+		&:before {
+			content: '\e90b'; // Берем значение из файла стилей шрифта Icomoon /source/style/fonts/icons.scss
+		}
+
+	}
+
+	&.button--edit {
+		&:before {
+			content: '\e908';
+		}
+
 	}
 
 }
