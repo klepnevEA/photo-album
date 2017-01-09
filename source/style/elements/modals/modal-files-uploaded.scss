@@ -1,6 +1,11 @@
+// Спрятать элементы
+.modal--uploaded {
+	// display: none;
+}
+
 .modal--uploaded {
 	
-	.modal__content--small {
+	.modal__content {
 		max-width: 280px;
 		@include center;
 	}

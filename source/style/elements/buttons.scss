@@ -5,6 +5,9 @@
 	color: $lightColor;
 	text-decoration: none;
 	display: inline-block;
+	font-family: panton;
+	font-size: 14px;
+	line-height: 22px;
 }
 
 .button--confirm {
@@ -16,6 +19,8 @@
 	padding: 0;
 	height: auto;
 	margin: 10px 20px;
+	font-family: $proximaSb;
+	font-size: 16px;
 }
 
 .button--red {
@@ -24,11 +29,16 @@
 
 .button--delete {
 	background-color: $redColor;
+	position: relative;
+	padding-left: 42px;
 
 	&:before {
 		content: '\e907';
 		font-family: icomoon;
-		margin-right: 10px;
+		font-size: 16px;
+		position: absolute;
+		left: 20px;
+		top: 8px;
 	}
 
 }
@@ -48,6 +58,7 @@
 .button--more {
 	color: $blueColor;
 	border: 1px solid $blueColor;
+	line-height: 18px;
 
 	&:hover {
 		color: $lightColor;

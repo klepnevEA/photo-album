@@ -1,11 +1,7 @@
 // Спрятать элементы
-.dropzone__files {
-	// display: none;
-}
 .modal__error {
 	// display: none;
 }
-
 
 .modal {
 	position: absolute;
@@ -41,6 +37,11 @@
     justify-content: space-between;
 }
 
+.modal__heading {
+	font-family: $panton;
+	@include font (21px, 21px, $darkColor, normal);
+}
+
 .modal__close {
 	text-decoration: none;
 	color: $grayColor;
@@ -49,6 +50,16 @@
 
 .modal__main {
 	padding: 20px;
+}
+
+.modal__label {
+	font-family: $proximaSb;
+	@include font (16px, 21px, $darkColor, normal);
+}
+
+.modal__text {
+	font-family: $proximaLt;
+	@include font (16px, 21px, $darkColor, normal);
 }
 
 .modal__footer {

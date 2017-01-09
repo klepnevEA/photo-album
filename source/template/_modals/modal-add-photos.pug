@@ -2,6 +2,8 @@ extends modal-template
 
 block modal-variables
 	- var modalId = 'modalAddPhotos'
+	- var modalClass = 'modal--add-photos'
+	- var header = true
 	- var heading = 'Добавить фотографии'
 
 block modal-content
@@ -11,9 +13,12 @@ block modal-content
 	form.dropzone#dropzone(method="post")
 		.dropzone__add
 			i.dropzone__icon.icon-cam
-			.dropzone__text Перетащите фото сюда или
-				label.dropzone__label выберите файл
-					input.dropzone__input(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
+			.dropzone__text.modal__text 
+				span Перетащите фото сюда или
+				label.dropzone__label
+					.button.button--cancel
+						span выберите файл
+						input.dropzone__input(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
 		.dropzone__files
 			ul.dropzone__files-list
 				- var n = 6;
