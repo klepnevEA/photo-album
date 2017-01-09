@@ -15,10 +15,8 @@ block modal-content
 			i.dropzone__icon.icon-cam
 			.dropzone__text.modal__text 
 				span Перетащите фото сюда или
-				label.dropzone__label
-					.button.button--cancel
-						span выберите файл
-						input.dropzone__input(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
+				label.button.button--cancel(for="modalAddImageInput") выберите файл
+				input.hidden__input#modalAddImageInput(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
 		.dropzone__files
 			ul.dropzone__files-list
 				- var n = 6;
@@ -28,5 +26,5 @@ block modal-content
 	p.modal__error Выбран неверный формат изображений. Попробуйте снова
 
 block modal-content-footer
-	a.modal__footer-link.button.button--confirm#modalAlbumSave(href="#") Сохранить
-	a.modal__footer-link.button.button--cancel#modalAlbumCancel(href="#") Отменить
+	a.modal__footer-link.button.button--confirm#modalAlbumAddSave(href="#") Сохранить
+	a.modal__footer-link.button.button--cancel#modalAlbumAddCancel(href="#") Отменить

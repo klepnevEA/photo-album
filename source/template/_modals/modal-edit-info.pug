@@ -1,0 +1,48 @@
+extends modal-template
+
+block modal-variables
+	- var modalId = 'modalEditInfo'
+	- var modalClass = 'modal--edit-info'
+	- var header = true
+	- var heading = 'Редактировать профиль'
+
+block modal-content
+	form.photo-edit#editInfo(method="post")
+		.modal__form-row
+			label.modal__label Имя
+			input.modal__input-text.modal__input-text--short#userName(type="text" name="user-name" placeholder="Имя")
+			input.modal__input-text.modal__input-text--short.modal__input-text--right#userLastname(type="text" name="user-lastname" placeholder="Фамилия")
+		.modal__form-row
+			label.modal__label О себе
+			textarea.modal__input-textarea#photoDescription(name="photo-description" rows="5" placeholder="Как я провел лето. Чтобы было красиво, описание может быть на несколько строк. Убедитесь сами!")
+		.modal__form-row.img-upload
+			.img-upload__preview
+			.img-upload__fake-input
+				label.button.button--add(for="modalAddImageInput") Загрузить обложку
+				input.hidden__input#modalAddImageInput(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
+			p.img-upload__message (файл должен быть размером не более #[span.cover-upload__message--bold 512 кб])
+		.modal__form-row.img-upload
+			.img-upload__preview
+			.img-upload__fake-input
+				label.button.button--add(for="modalAddImageInput") Загрузить фон
+				input.hidden__input#modalAddImageInput(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
+			p.img-upload__message (файл должен быть размером не более #[span.cover-upload__message--bold 1024 кб])
+		.separator
+		.modal__form-row.modal__form-row--contact
+			label.modal__label Вконтакте
+			input.modal__input-text.modal__input-text--short#userContactVkontakte(type="text" name="user-contact-vkontakte")
+		.modal__form-row.modal__form-row--contact
+			label.modal__label Facebook
+			input.modal__input-text.modal__input-text--short#userContactFacebook(type="text" name="user-facebook")
+		.modal__form-row.modal__form-row--contact
+			label.modal__label Email
+			input.modal__input-text.modal__input-text--short#userContactEmail(type="text" name="user-email")
+		.modal__form-row.modal__form-row--contact
+			label.modal__label Twitter
+			input.modal__input-text.modal__input-text--short#userContactTwitter(type="text" name="user-contact-twitter")
+
+block modal-content-footer
+	a.modal__footer-link.button.button--confirm#modalAlbumSave(href="#") Сохранить
+	a.modal__footer-link.button.button--cancel#modalAlbumCancel(href="#") Отменить
+	.modal__footer-link-wrapper
+		a.modal__footer-link.modal__footer-link--delete.button.button--delete#modalAlbumDelete(href="#") Удалить
