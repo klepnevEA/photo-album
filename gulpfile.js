@@ -17,7 +17,9 @@ global.$ = {
   buffer : require('vinyl-buffer'),
   babel : require('babelify'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  sassGlob: require('gulp-sass-glob'),
+  cssunit: require('gulp-css-unit')
 };
 
 $.path.task.forEach(function(taskPath) {
