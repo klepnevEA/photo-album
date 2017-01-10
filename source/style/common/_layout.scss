@@ -9,9 +9,20 @@ html, body {
   margin: 0;
 }
 
+.wrapper {
+  position: relative;  
+}
+
 .clearfix::before, .clearfix::after {
   content: "";
   width: 100%;
   clear: both;
   display: block;
+}
+
+.separator {
+	width: auto;
+	height: 1px;
+	margin: 40px -20px;
+	background-color: $grayColor;
 }

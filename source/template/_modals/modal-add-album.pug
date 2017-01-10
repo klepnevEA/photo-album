@@ -1,0 +1,28 @@
+extends modal-template
+
+block modal-variables
+	- var modalId = 'modalAddAlbum'
+	- var modalClass = 'modal--add-album'
+	- var header = true
+	- var heading = 'Добавить альбом'
+
+block modal-content
+	form.photo-edit#addAlbum(method="post")
+		.modal__form-row
+			label.modal__label Название
+			input.modal__input-text#photoName(type="text" name="photo-name" placeholder="Мой альбом")
+		.modal__form-row
+			label.modal__label Описание
+			textarea.modal__input-textarea#photoDescription(name="photo-description" rows="5" placeholder="Как я провел лето. Чтобы было красиво, описание может быть на несколько строк. Убедитесь сами!")
+		.modal__form-row.img-upload
+			.img-upload__preview
+			.img-upload__fake-input
+				label.button.button--add(for="modalAddImageInput") Загрузить обложку
+				input.hidden__input#modalAddImageInput(type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png")
+			p.img-upload__message (файл должен быть размером не более #[span.img-upload__message--bold 1024 кб])
+
+block modal-content-footer
+	a.modal__footer-link.button.button--confirm#modalAlbumSave(href="#") Сохранить
+	a.modal__footer-link.button.button--cancel#modalAlbumCancel(href="#") Отменить
+	.modal__footer-link-wrapper
+		a.modal__footer-link.modal__footer-link--delete.button.button--delete#modalAlbumDelete(href="#") Удалить

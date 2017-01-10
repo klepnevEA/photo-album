@@ -1,6 +1,13 @@
-.modal.modal--uploaded#modalUploded
-	section.modal__content.modal__content--small
-		.modal__main
-			.modal__label Файлы были загружены
-		footer.modal__footer
-			a.modal__footer-link.button.button--close#modalClose(href="#") Закрыть
+extends modal-template
+
+block modal-variables
+	- var modalId = 'modalUploded'
+	- var modalClass = 'modal--uploaded'
+	- var header = false
+	
+block modal-content
+	.modal__label Файлы были загружены
+
+block modal-content-footer
+	a.modal__footer-link.button.button--close#modalClose(href="#") Закрыть
+			

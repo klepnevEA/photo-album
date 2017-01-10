@@ -1,10 +1,21 @@
+// Спрятать элементы
+.modal--add-photos {
+	// display: none;
+}
+.dropzone__files {
+	display: none;
+}
+
 .modal__album-title {
 	display: flex;
 	align-items: baseline;
+	margin-bottom: 20px;
 }
 
-.modal__almum-lable {
-	margin-right: 20px;
+.modal--add-photos {
+	.modal__label {
+		margin-right: 20px;
+	}	
 }
 
 .modal__album-heading {
@@ -20,6 +31,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	.button--cancel {
+		margin: 0;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .dropzone__add {
@@ -35,27 +53,6 @@
 
 .dropzone__text {
 	max-width: 180px;
-}
-
-.dropzone__label {
-	position: relative;
-
-	&:hover {
-		color: $blueColor;
-	}
-
-}
-
-.dropzone__input {
-	cursor: pointer;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
 }
 
 .dropzone__files {
@@ -114,4 +111,8 @@
 	display: inline-block;
 	background-color: $bgErrorColor;
 	border-radius: 3px;
+	font-family: $proximaSb;
+	font-size: 14px;
+	line-height: 16px;
+	color: rgba($darkColor, 0.6);
 }

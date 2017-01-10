@@ -49,31 +49,33 @@
 	position: relative;
 
 	&:before {
-		// font-family: 'CCU-Icons-Font';
-		// @include font(15px, 45px, $loginInputBeforeColor, normal);
+		font-family: icomoon;
+		@include font(16px, 16px, $grayColor, normal);
 		display: block;
-		text-align: center;
+		@include centerY;
+		right: 0;
 	}
 
 }
 
 .login-form__input-before--name {
 	&:before {
-		content: '\e90c';
+		content: '\e90f';
 	}
 
 }
 
 .login-form__input-before--email {
 	&:before {
-		content: '\e90c';
+		content: '\e909';
+		font-size: 12px;
 	}
 
 }
 
 .login-form__input-before--password {
 	&:before {
-		content: '\e90f';
+		content: '\e912';
 	}
 
 }
