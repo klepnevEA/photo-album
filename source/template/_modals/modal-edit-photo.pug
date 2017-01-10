@@ -1,0 +1,26 @@
+extends modal-template
+
+block modal-variables
+	- var modalId = 'modalEditPhoto'
+	- var modalClass = 'modal--edit-photo'
+	- var header = true
+	- var heading = 'Редактировать фотографию'
+
+block modal-content
+	form.photo-edit#photoEdit(method="post")
+		.modal__form-row
+			label.modal__label Название
+			input.modal__input-text#photoName(type="text" name="photo-name" placeholder="Домик в лесу")
+		.modal__form-row
+			label.modal__label Описание
+			textarea.modal__input-textarea#photoDescription(name="photo-description" rows="5" placeholder="Описание фотографии может быть с #хэштегами.\nЧтобы было красиво, описание может быть на несколько строк.\nУбедитесь сами!")
+	form.photo-delete#photoDelete(method="post")
+		p.modal__text Вы хотите удалить это фото?
+		a.button.button--red(href="#") Да
+		a.button.button--cancel(href="#") Отменить
+
+block modal-content-footer
+	a.modal__footer-link.button.button--confirm#modalPhotoSave(href="#") Сохранить
+	a.modal__footer-link.button.button--cancel#modalPhotoCancel(href="#") Отменить
+	.modal__footer-link-wrapper
+		a.modal__footer-link.modal__footer-link--delete.button.button--delete#modalPhotoDelete(href="#") Удалить

@@ -1,0 +1,118 @@
+// Спрятать элементы
+.modal--add-photos {
+	// display: none;
+}
+.dropzone__files {
+	display: none;
+}
+
+.modal__album-title {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 20px;
+}
+
+.modal--add-photos {
+	.modal__label {
+		margin-right: 20px;
+	}	
+}
+
+.modal__album-heading {
+}
+
+.dropzone {
+	width: 100%;
+	min-height: 330px;
+	border: 3px dashed $bgLightColor;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.button--cancel {
+		margin: 0;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.dropzone__add {
+	text-align: center;
+}
+
+.dropzone__icon {
+	color: $grayColor;
+	font-size: 32px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.dropzone__text {
+	max-width: 180px;
+}
+
+.dropzone__files {
+	width: 100%;
+	height: 100%;
+}
+
+.dropzone__files-list {
+	padding: 20px 0 0 20px;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.dropzone__files-item {
+	flex-basis: 133px;
+	height: 133px;
+	margin: 0 20px 20px 0;
+	position: relative;
+	background-image: url(/assets/img/my-albums_image.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+}
+
+.dropzone__files-remove {
+	display: block;
+	background-color: $redColor;
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	border: 2px solid $lightColor;
+	color: $lightColor;
+	position: absolute;
+	right: -12px;
+	top: -12px;
+	text-decoration: none;
+
+	&:before {
+		content: '\e905';
+		color: $lightColor;
+		font-family: icomoon;
+		font-size: 10px;
+		line-height: 10px;
+		text-align: center;
+		width: 100%;
+		display: inline-block;
+	}
+
+}
+
+.modal__error {
+	padding: 8px 10px;
+	margin: 20px 0 0 0;
+	display: inline-block;
+	background-color: $bgErrorColor;
+	border-radius: 3px;
+	font-family: $proximaSb;
+	font-size: 14px;
+	line-height: 16px;
+	color: rgba($darkColor, 0.6);
+}

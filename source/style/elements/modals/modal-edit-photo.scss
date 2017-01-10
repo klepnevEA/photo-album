@@ -1,0 +1,26 @@
+// Спрятать элементы
+.modal--edit-photo {
+	display: none;
+}
+.photo-delete {
+	display: none;
+}
+
+
+.photo-edit {
+	padding: 20px 0 0 0;
+}
+
+.photo-delete {
+	padding: 20px 0;
+	text-align: center;
+
+	.modal__text {
+		margin-bottom: 20px;
+	}
+
+	.button--cancel {
+		color: rgba($darkColor, 0.8);
+	}
+
+}

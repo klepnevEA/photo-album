@@ -1,0 +1,23 @@
+// Спрятать элементы
+.modal--edit-info {
+	// display: none;
+}
+.img-upload__preview {
+	// display: none;
+}
+
+.modal__form-row.modal__form-row--contact {
+	align-items: center;
+	margin-bottom: 10px;
+	&:last-of-type {
+		margin-bottom: 20px;
+	}
+}
+
+.modal__input-text--short {
+	max-width: 250px;
+}
+
+.modal__input-text--right {
+	margin-left: 20px;
+}

@@ -25,6 +25,7 @@ $.path.task.forEach(function(taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
+
   'clean',
   $.gulp.parallel(
     'sass',
@@ -39,4 +40,5 @@ $.gulp.task('default', $.gulp.series(
     'watch',
     'serve'
   )
+
 ));

@@ -1,5 +1,14 @@
-body {
-  margin: 0;
-}
+// fonts
+@import "fonts/font-awesome/font-awesome";
+@import "fonts/panton";
+@import "fonts/proximanova";
+@import "fonts/icons";
 
-@import 'common/greating';
+// common
+@import "common/mixins";
+@import "common/variables";
+@import "common/layout";
+
+// elements
+@import "elements/**/*.scss";
+

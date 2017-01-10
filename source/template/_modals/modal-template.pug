@@ -1,0 +1,12 @@
+block modal-variables
+
+.modal(id= modalId, class= modalClass)
+	section.modal__content
+		if header
+			header.modal__header
+				h3.modal__heading #{heading}
+				a.modal__close.icon-close#modalClose(href="#")
+		.modal__main
+			block modal-content
+		footer.modal__footer
+			block modal-content-footer

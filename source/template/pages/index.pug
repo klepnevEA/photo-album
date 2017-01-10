@@ -1,7 +1,13 @@
 extends ../_template
 
-block variables
-  - var title = 'Home page'
+  - var title = 'Главная страница'
 
 block content
-  include ../common/_greating
+    include ../_blocks/_header_main
+    include ../_blocks/_slider
+    include ../_blocks/_new-photos_main
+    include ../_blocks/_albums_main
+    include ../_blocks/_footer
+    include ../_modals/modal-add-album
+    include ../_modals/modal-edit-info
+>>>>>>> layout-repo/master

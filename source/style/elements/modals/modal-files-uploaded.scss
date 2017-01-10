@@ -1,0 +1,21 @@
+// Спрятать элементы
+.modal--uploaded {
+	display: none;
+}
+
+.modal--uploaded {
+	
+	.modal__content {
+		max-width: 280px;
+		@include center;
+	}
+
+	.modal__main {
+		padding: 30px 20px;		
+	}
+
+	.modal__footer {
+		justify-content: center;
+	}
+	
+}

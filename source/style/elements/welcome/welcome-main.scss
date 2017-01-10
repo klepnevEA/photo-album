@@ -1,0 +1,118 @@
+.welcome {
+	width: 100%;
+	margin: auto;
+	min-height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+.welcome__flipper {
+	height: 100%;
+	width: 100%;
+}
+
+.welcome__form-wrapper {
+	width: 100%;
+	max-width: 280px;
+	margin: 0 auto;
+	background-color: $lightColor;
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.login-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	// @include font(16px, 24px, false, normal);
+	// font-family: $font;
+}
+
+.login-form__input-wrap {
+	display: flex;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid $welcomeBorderColor;
+}
+
+.login-form__input-before {
+	width: 40px;
+	height: 40px;
+	position: relative;
+
+	&:before {
+		font-family: icomoon;
+		@include font(16px, 16px, $grayColor, normal);
+		display: block;
+		@include centerY;
+		right: 0;
+	}
+
+}
+
+.login-form__input-before--name {
+	&:before {
+		content: '\e90f';
+	}
+
+}
+
+.login-form__input-before--email {
+	&:before {
+		content: '\e909';
+		font-size: 12px;
+	}
+
+}
+
+.login-form__input-before--password {
+	&:before {
+		content: '\e912';
+	}
+
+}
+
+.login-form__input-text {
+	height: 40px;
+	padding: 0 12px;
+	flex-grow: 1;
+	border: none;
+	// background: $mainColorLight;
+	z-index: 10;
+
+	&.error {
+		// border: 1px solid $errorColor;
+	}
+
+}
+
+.login-form__links-wrap {
+    width: 100%;
+    padding: 20px;
+
+}
+
+.login-form__link {
+	font-family: $proximaSb;
+	@include link(none, 14px, 24px, normal, $welcomeLinkColor, $welcomeLinkColor, $welcomeLinkColor);
+}
+
+.login-form__button {
+	font-family: $panton;
+	@include link(none, 14px, false, normal, $lightColor, $lightColor, $lightColor);
+	background-color: $buttonColor;
+	width: 100%;
+	border-radius: 20px;
+	height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+}

@@ -1,4 +1,5 @@
-#Учебная сборка Loftschool (выпускной проект №1) 
+
+#Учебный проект #1 - photoalbum by group#4
 
 Stack:
  - Gulp 4.0
@@ -10,5 +11,7 @@ Getting started:
 3. npm install gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
 4. npm install
 6. run "gulp" command to start
+
 # gulp-build-13.12.16
 # photo-album
+

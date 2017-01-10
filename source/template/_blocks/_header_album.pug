@@ -1,0 +1,27 @@
+header.header
+    .header__main
+        .user.user--mini
+            .user__logo
+            h3.user__name Имя Фамилия
+        .albums-header
+            h1.albums-header__title Лесные прогулки
+            h5.albums-header__description.
+                Фотографии природы, леса, енотов и оленей. Как прекрасно сойти на
+                дальней станции и пройтись по полю босиком. И чтобы никто не беспокоил
+                бродить влюбленным в тишину. Запах меда, лесных оленей и енотов будоражит
+                утро
+        .controls
+            a.button.button--menu.button--home(href="/") Вернуться
+            a.button.button--menu.button--edit#albumHeaderEditButton(href="#") Редактировать
+    .header__bottom
+        .albums-stat
+            ul.albums-stat__list
+                li.albums-stat__item
+                    span.albums-stat__count#albumStatPhotosCount 18
+                    span.albums-stat__text#albumStatPhotosText Фотографий
+                li.albums-stat__item
+                    span.albums-stat__count#albumStatLikesCount 12
+                    span.albums-stat__text#albumStatLikesText Лайков
+                li.albums-stat__item
+                    span.albums-stat__count#albumStatCommentsCount 4
+                    span.albums-stat__text#albumStatCommentsText Комментария

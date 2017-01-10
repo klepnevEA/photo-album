@@ -1,13 +1,13 @@
 block variables
 
 doctype html
-html
+html(lang=ru-Ru)
   head
     meta(charset="utf-8")
     title #{title}
-    meta(content="" name="author")
-    meta(content="" name="description")
-    meta(content="" name="keywords")
+    meta(content="group#4" name="author")
+    meta(content="Photoalbum 2017 by Loftschool Web-Advanced" name="description")
+    meta(content="Photoalbum, group#4" name="keywords")
     meta(content="width=device-width, initial-scale=1" name="viewport")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
 
@@ -24,4 +24,8 @@ html
     <![endif]-->
 
   body
-    block content
+
+    include _mixins/_svg-mixin.pug
+    .wrapper
+        block content
+
