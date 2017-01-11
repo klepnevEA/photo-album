@@ -1,0 +1,5 @@
+.social
+    ul.social__list
+        each href, social in {'vk':'https://vk.com/', 'fb':'http://facebook.com', 'twitter':'http://twitter.com', 'google':'http://google.com/', 'email':'http://gmail.com'}
+            li.social__item
+                a.social__link(class=`icon-soc_${social}` href=`${href}` target="_blank") #{social}
