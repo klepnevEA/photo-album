@@ -117,4 +117,11 @@
 
 	}
 
+	&.button--logout {
+		&:before {
+			content: '\e911';
+		}
+
+	}
+
 }
