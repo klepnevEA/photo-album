@@ -1,10 +1,9 @@
+- var columnLeft = 'Перед Вами сервис, который поможет Вам организовать свои фотографии в альбомы и поделиться ими со всем миром!'
+- var columnRight = '2017 | Создано командой профессионалов на продвинутом курсе по веб-разработке от Loftschool'
+
 footer.footer
-    div.footer__bg
-    div.footer__col-left.
-        Перед Вами сервис, который поможет Вам организовать
-        свои фотографии в альбомы и поделиться ими со всем миром!
-    div.footer__col-center
-        a.footer__arrow(href="#")
-    div.footer__col-right.
-        2017 | Создано командой профессионалов на продвинутом курсе
-        по веб-разработке от Loftschool
+    .footer__bg
+    .footer__col-left #{columnLeft}
+    .footer__col-center
+        a.footer__arrow.icon-top#arrowUp(href="#")
+    .footer__col-right #{columnRight}
