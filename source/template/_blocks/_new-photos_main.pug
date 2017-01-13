@@ -1,68 +1,39 @@
+- var pageTitle = 'Новое в мире' // Заголовок страницы
+- var albumQty = 2               // Число изображений в блоке
 
-div.photos
+section.photos
+    h1.photos__title #{pageTitle}
+    ul.photos__list
+        - for (var x = 0; x < albumQty; x++)
+            li.photos__item
 
-            h1.page-title Новое в мире
-            ul.photos__list
-                li.photos__item
-                    div.photos__image
-                        div.photos__image-loupe
-                    div.photos__desc
-                        div.photos__author-ava
-                        div.photos__info
-                            div.photos__title Путешествие на лодке по озеру
-                            div.photos__stat
-                                div.photos__stat-icon.photos__stat-icon_comments
-                                div.photos__stat-text 9
-                                div.photos__stat-icon.photos__stat-icon_likes
-                                div.photos__stat-text 15
-                        div.photos__footer
-                            div.photos__footer-icon
-                            div.photos__footer-text Прогулки по воде
-                li.photos__item
-                    div.photos__image
-                        div.photos__image-loupe
-                    div.photos__desc
-                        div.photos__author-ava
-                        div.photos__info
-                            div.photos__title Путешествие на лодке по озеру
-                            div.photos__stat
-                                div.photos__stat-icon.photos__stat-icon_comments
-                                div.photos__stat-text 9
-                                div.photos__stat-icon.photos__stat-icon_likes
-                                div.photos__stat-text 15
-                        div.photos__footer
-                            div.photos__footer-icon
-                            div.photos__footer-text Прогулки по воде
-                li.photos__item
-                    div.photos__image
-                        div.photos__image-loupe
-                    div.photos__desc
-                        div.photos__author-ava
-                        div.photos__info
-                            div.photos__title Путешествие на лодке по озеру
-                            div.photos__stat
-                                div.photos__stat-icon.photos__stat-icon_comments
-                                div.photos__stat-text 9
-                                div.photos__stat-icon.photos__stat-icon_likes
-                                div.photos__stat-text 15
-                        div.photos__footer
-                            div.photos__footer-icon
-                            div.photos__footer-text Прогулки по воде
-                li.photos__item
-                    div.photos__image
-                        div.photos__image-loupe
-                    div.photos__desc
-                        div.photos__author-ava
-                        div.photos__info
-                            div.photos__title Путешествие на лодке по озеру
-                            div.photos__stat
-                                div.photos__stat-icon.photos__stat-icon_comments
-                                div.photos__stat-text 9
-                                div.photos__stat-icon.photos__stat-icon_likes
-                                div.photos__stat-text 15
-                        div.photos__footer
-                            div.photos__footer-icon
-                            div.photos__footer-text Прогулки по воде
+                - // Переменные, которые мы получаем из условного объекта "Фотография" базы данных
 
-            a.page-button(href="#") Показать еще
+                - var photoSrc = '/assets/img/new_content_image.jpg' // главное фото
+                - var photoLink = '#' // сылка на страницу главного фото
+                - var photoTitle = 'Путешествие на лодке по озеру' // Название фото
+                - var authorSrc = '/assets/img/default_avatar.jpg' // фотография автора
+                - var authorLink = '#' // ссылка на страницу автора
+                - var authorName = 'Автор фото' // имя автора
+                - var commentsCount = 10 // кол-во комментариев
+                - var likesCount = 20 // кол-во лайков
+                - var albumTitle = 'Прогулки по воде' // название альбома
+                - var albumLink = '/album.html' // ссылка на альбом
 
+                section.photos__section
+                    a.photos__image-link(href=photoLink)
+                        img.photos__image-img(src=photoSrc, alt=photoTitle)
+                    .photos__desc
+                        a.photos__author-link(href=authorLink)
+                            img.photos__author-img(src=authorSrc, alt=authorName, title=authorName)
+                        .photos__info
+                            a.photos__photo-link(href=photoLink)
+                                h3.photos__photo-title #{photoTitle}
+                            .photos__stat
+                                span.photos__stat-text.icon-comments #{commentsCount}
+                                span.photos__stat-text.icon-like #{likesCount}
+                    .photos__footer
+                        a.photos__album-link(href=albumLink)
+                            h4.photos__album-title #{albumTitle}
+        
+    a.button.button--more#photoMainMoreButton(href="#") Показать еще
