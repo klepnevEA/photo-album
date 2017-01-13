@@ -1,28 +1,36 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-  height:100%;
-  width:100%;
-  margin: 0;
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .wrapper {
-  position: relative;  
+    position: relative;
 }
 
-.clearfix::before, .clearfix::after {
-  content: "";
-  width: 100%;
-  clear: both;
-  display: block;
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    width: 100%;
+    clear: both;
+    display: block;
 }
 
 .separator {
-	width: auto;
-	height: 1px;
-	margin: 40px -20px;
-	background-color: $grayColor;
+    width: auto;
+    height: 1px;
+    margin: 40px -20px;
+    background-color: $grayColor;
 }

@@ -1,39 +1,40 @@
 - var pageTitle = 'Новое в мире' // Заголовок страницы
 - var albumQty = 2               // Число изображений в блоке
 
-section.photos
-    h1.photos__title #{pageTitle}
-    ul.photos__list
-        - for (var x = 0; x < albumQty; x++)
-            li.photos__item
+.container
+    section.photos
+        h1.photos__title #{pageTitle}
+        ul.photos__list
+            - for (var x = 0; x < albumQty; x++)
+                li.photos__item
 
-                - // Переменные, которые мы получаем из условного объекта "Фотография" базы данных
+                    - // Переменные, которые мы получаем из условного объекта "Фотография" базы данных
 
-                - var photoSrc = '/assets/img/new_content_image.jpg' // главное фото
-                - var photoLink = '#' // сылка на страницу главного фото
-                - var photoTitle = 'Путешествие на лодке по озеру' // Название фото
-                - var authorSrc = '/assets/img/default_avatar.jpg' // фотография автора
-                - var authorLink = '#' // ссылка на страницу автора
-                - var authorName = 'Автор фото' // имя автора
-                - var commentsCount = 10 // кол-во комментариев
-                - var likesCount = 20 // кол-во лайков
-                - var albumTitle = 'Прогулки по воде' // название альбома
-                - var albumLink = '/album.html' // ссылка на альбом
+                    - var photoSrc = '/assets/img/new_content_image.jpg' // главное фото
+                    - var photoLink = '#' // сылка на страницу главного фото
+                    - var photoTitle = 'Путешествие на лодке по озеру' // Название фото
+                    - var authorSrc = '/assets/img/default_avatar.jpg' // фотография автора
+                    - var authorLink = '#' // ссылка на страницу автора
+                    - var authorName = 'Автор фото' // имя автора
+                    - var commentsCount = 10 // кол-во комментариев
+                    - var likesCount = 20 // кол-во лайков
+                    - var albumTitle = 'Прогулки по воде' // название альбома
+                    - var albumLink = '/album.html' // ссылка на альбом
 
-                section.photos__section
-                    a.photos__image-link(href=photoLink)
-                        img.photos__image-img(src=photoSrc, alt=photoTitle)
-                    .photos__desc
-                        a.photos__author-link(href=authorLink)
-                            img.photos__author-img(src=authorSrc, alt=authorName, title=authorName)
-                        .photos__info
-                            a.photos__photo-link(href=photoLink)
-                                h3.photos__photo-title #{photoTitle}
-                            .photos__stat
-                                span.photos__stat-text.icon-comments #{commentsCount}
-                                span.photos__stat-text.icon-like #{likesCount}
-                    .photos__footer
-                        a.photos__album-link(href=albumLink)
-                            h4.photos__album-title #{albumTitle}
-        
-    a.button.button--more#photoMainMoreButton(href="#") Показать еще
+                    section.photos__section
+                        a.photos__image-link(href=photoLink)
+                            img.photos__image-img(src=photoSrc, alt=photoTitle)
+                        .photos__desc
+                            a.photos__author-link(href=authorLink)
+                                img.photos__author-img(src=authorSrc, alt=authorName, title=authorName)
+                            .photos__info
+                                a.photos__photo-link(href=photoLink)
+                                    h3.photos__photo-title #{photoTitle}
+                                .photos__stat
+                                    span.photos__stat-text.icon-comments #{commentsCount}
+                                    span.photos__stat-text.icon-like #{likesCount}
+                        .photos__footer
+                            a.photos__album-link(href=albumLink)
+                                h4.photos__album-title #{albumTitle}
+            
+        a.button.button--more#photoMainMoreButton(href="#") Показать еще
