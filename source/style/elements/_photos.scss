@@ -218,6 +218,7 @@
         position: relative;
         margin-left:15px;
 
+
         &:before {
           content: "\e908";
           font-family: icomoon;
@@ -226,7 +227,7 @@
           top: -20px;
           left: 0;
           transition: $transition;
-
+          cursor:pointer;
         }
 
         &:hover {

@@ -1,49 +1,26 @@
-div.albums
-    .container    
-        h1.page-title Мои альбомы
-        ul.albums__list
-            li.albums__item
-                a(class="albums__link" href="album.html")
-                    div.albums__info
-                        div.albums__info-title Фотографии природы, леса, енотов и оленей...
-                        div.albums__info-count 18 фотографий
-                    div.albums__image
-                    div.albums__desc
-                        div.albums__edit-icon
-                        div.albums__title Лесной выезд
-            li.albums__item
-                a(class="albums__link" href="album.html")
-                    div.albums__info
-                        div.albums__info-title Фотографии природы, леса, енотов и оленей...
-                        div.albums__info-count 18 фотографий
-                    div.albums__image
-                    div.albums__desc
-                        div.albums__edit-icon
-                        div.albums__title Лесной выезд
-            li.albums__item
-                a(class="albums__link" href="album.html")
-                    div.albums__info
-                        div.albums__info-title Фотографии природы, леса, енотов и оленей...
-                        div.albums__info-count 18 фотографий
-                    div.albums__image
-                    div.albums__desc
-                        div.albums__edit-icon
-                        div.albums__title Лесной выезд
-            li.albums__item
-                a(class="albums__link" href="album.html")
-                    div.albums__info
-                        div.albums__info-title Фотографии природы, леса, енотов и оленей...
-                        div.albums__info-count 18 фотографий
-                    div.albums__image
-                    div.albums__desc
-                        div.albums__edit-icon
-                        div.albums__title Лесной выезд
-            li.albums__item
-                a(class="albums__link" href="album.html")
-                    div.albums__info
-                        div.albums__info-title Фотографии природы, леса, енотов и оленей...
-                        div.albums__info-count 18 фотографий
-                    div.albums__image
-                    div.albums__desc
-                        div.albums__edit-icon
-                        div.albums__title Лесной выезд
+- var pageTitle = 'Мои альбомы';
+- var albumsQty = 6;
+
+section.albums-wrapper
+    .container
+        div.albums
+            h1.albums__page-title #{pageTitle}
+            ul.albums__list
+                - for (var x = 0; x < albumsQty; x++)
+                    li.albums__item
+
+                        - // Переменные, которые мы получаем из условного объекта "Альбомы" базы данных
+                        - var albumSrc = '/assets/img/my-albums_image.jpg' // картинка альбома
+                        - var albumTitle = 'Лесной выезд' // название альбома
+                        - var albumDesc = 'Фотографии природы, леса, енотов и оленей...' // описание
+                        - var albumPhotoQty = 18 // количество фотографий в альбоме
+
+                        a(class="albums__link" href="album.html")
+                            div.albums__info
+                                div.albums__info-title #{albumDesc}
+                                div.albums__info-count #{albumPhotoQty} фотографий
+                            div.albums__image
+                                img.albums__image-img(src=albumSrc, alt=albumTitle)
+                        div.albums__desc
+                                a.photos__photo-edit(href=albumLink)
+                                h4.albums__title #{albumTitle}
