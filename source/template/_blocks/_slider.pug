@@ -14,7 +14,6 @@ div.slider-modal
                         div.user-mini__logo.user-mini__logo--photo
                         div.user-mini__name.user-mini__name--photo Имя Фамилия
                     a.slider__image-likes(href="")
-                        span.slider__image-likes-icon
                         span.slider__image-likes-text 0
                     div.slider__desc
                         div.slider__image-title Путешествие на речном трамвайчике
@@ -33,19 +32,12 @@ div.slider-modal
                                             input.slider__add-comment-input(type="text", name="comment", placeholder="Добавить комментарий")
                                             button.slider__add-comment-button(type="submit") Добавить
                             ul.slider__comment-block
-                                li.slider__comment-item
-                                    div.user-mini.user-mini--comments
-                                        div.user-mini__logo
-                                        div.user-mini__name.user-mini__name--photo Имя фамилия
-                                             div.slider__comment-text.
-                                                                    Эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
-                                                                    Я совсем один и блаженствую в здешнем краю, словно созданном для таких,
-                                                                    как я. Я так счастлив, мой друг, так упоен ощущением.
-                                li.slider__comment-item
-                                    div.user-mini.user-mini--comments
-                                        div.user-mini__logo
-                                        div.user-mini__name.user-mini__name--photo Имя фамилия
-                                            div.slider__comment-text.
-                                                Эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
-                                                Я совсем один и блаженствую в здешнем краю, словно созданном для таких,
-                                                как я. Я так счастлив, мой друг, так упоен ощущением.
+                                - for (var x = 0; x < 3; x++)
+                                    li.slider__comment-item
+                                        div.user-mini.user-mini--comments
+                                            div.user-mini__logo
+                                            div.user-mini__name.user-mini__name--photo Имя фамилия
+                                                 div.slider__comment-text.
+                                                                        Эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+                                                                        Я совсем один и блаженствую в здешнем краю, словно созданном для таких,
+                                                                        как я. Я так счастлив, мой друг, так упоен ощущением.

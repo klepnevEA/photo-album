@@ -49,35 +49,46 @@
 
     &-block {
       display:block;
-      height:25px;
-      width:25px;
-      background-size:95% 95%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url('../img/close.svg');
 
-      &:hover {
-        background-image: url('../img/close_white.svg');
+      &:hover:before {
+        color:$lightColor;
+      }
+
+      &:before {
+        content: "\e905";
+        font-family: icomoon;
+        @include font (20px, 20px, rgba(lightgrey, 0.7), normal);
+        position: absolute;
+        top: 0;
+        left: -20px;
+        transition: $transition;
+        cursor:pointer;
+
       }
     }
   }
 
  &__prev-button {
-   position:absolute;
-   left:-40px;
-   top:220px;
+   position: absolute;
+   left: -40px;
+   top: 220px;
 
    &-block {
-     background-size:95% 95%;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-image: url('../img/arrow_left.svg');
-     height:25px;
-     width:15px;
-     display:block;
+     display: block;
 
-     &:hover {
-       background-image: url('../img/arrow_left_white.svg');
+     &:hover:before {
+       color: $lightColor;
+     }
+
+     &:before {
+       content: "\e902";
+       font-family: icomoon;
+       @include font (20px, 20px, rgba(lightgrey, 0.7), normal);
+       position: absolute;
+       top: 0;
+       left: 0;
+       transition: $transition;
+       cursor: pointer;
      }
    }
  }
@@ -88,16 +99,21 @@
    top:220px;
 
    &-block {
-     background-size:95% 95%;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-image: url('../img/arrow_right.svg');
-     height:25px;
-     width:15px;
-     display:block;
+     display: block;
 
-     &:hover {
-       background-image: url('../img/arrow_right_white.svg');
+     &:hover:before {
+       color: $lightColor;
+     }
+
+     &:before {
+       content: "\e903";
+       font-family: icomoon;
+       @include font (20px, 20px, rgba(lightgrey, 0.7), normal);
+       position: absolute;
+       top: 0;
+       left: -15px;
+       transition: $transition;
+       cursor: pointer;
      }
    }
 
@@ -137,6 +153,16 @@
       line-height:40px;
       color:#fff;
       margin-left:5px;
+      position:relative;
+
+      &:before {
+        content: "\e910";
+        font-family: icomoon;
+        font-size: 12px;
+        color: $lightColor;
+        transition: $transition;
+        margin-right:5px;
+      }
     }
   }
 
@@ -268,4 +294,44 @@
     color: #767676;
   }
 
+}
+
+.user-mini {
+  margin:20px 0 0 90px;
+  font-size:0;
+
+    &--photo {
+      margin:0;
+    }
+
+   &--comments {
+      margin:0 0 0 70px;
+     display:flex;
+   }
+
+  &__logo {
+    display:inline-block;
+    height:55px;
+    width:55px;
+    min-width:55px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/default_avatar.jpg');
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &__name {
+    display:inline-block;
+    margin-left:20px;
+    font-family: 'Panton', Arial, sans-serif;
+    font-size:16px;
+    line-height:21px;
+    color:#fff;
+    vertical-align: middle;
+    &--photo {
+           color:#343434;
+    }
+  }
 }

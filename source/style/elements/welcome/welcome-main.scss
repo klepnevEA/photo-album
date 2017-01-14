@@ -88,9 +88,15 @@
 	// background: $mainColorLight;
 	z-index: 10;
 
+    &:focus {
+      outline:none;
+    }
+
 	&.error {
 		// border: 1px solid $errorColor;
 	}
+
+
 
 }
 

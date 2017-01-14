@@ -4,6 +4,15 @@
     padding: 20px 0 0 90px;
     font-size: 0;
 
+    &--slider {
+      padding:0;
+      margin:0;
+
+      .user__name {
+        color: $darkColor;
+      }
+    }
+
     .user__logo {
         display: inline-block;
         height: 55px;
