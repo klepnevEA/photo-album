@@ -5,14 +5,23 @@
 	color: $lightColor;
 	text-decoration: none;
 	display: inline-block;
-	font-family: panton;
+	font-family: $panton;
 	font-size: 14px;
 	line-height: 22px;
 	transition: $transition;
 }
 
+.button--submit,
 .button--confirm {
 	background-color: $blueColor;
+
+	&:hover {
+		background-color: darken($blueColor, 10%);
+	}
+
+	&:active {
+		background-color: darken($blueColor, 20%);
+	}
 }
 
 .button--cancel {

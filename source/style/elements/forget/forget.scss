@@ -7,8 +7,23 @@
 		margin: 0 auto;
 	}
 
+	.welcome__h3 {
+		font-family: $proximaSb;
+    	@include font(14px, 14px, $darkColor, normal);
+    	margin: 15px 0;
+
+	}
+
+	.login-form__text {
+		margin-bottom: 10px;
+	}
+
 	.login-form__input-wrap {
-	    border-top: 0.0625rem solid #d3d3d3;
+	    border-top: 0.0625rem solid #d3d3d3;	
+	}
+
+	.button {
+		margin-top: 15px;
 	}
 
 }

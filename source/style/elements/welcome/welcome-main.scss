@@ -32,15 +32,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	// @include font(16px, 24px, false, normal);
-	// font-family: $font;
 }
 
 .login-form__input-wrap {
 	display: flex;
 	width: 100%;
 	position: relative;
-	border-bottom: 1px solid $welcomeBorderColor;
+	border-bottom: 1px solid $greyColor;
 }
 
 .login-form__input-before {
@@ -68,7 +66,8 @@
 .login-form__input-before--email {
 	&:before {
 		content: '\e909';
-		font-size: 12px;
+		font-size: 14px;
+		top: 48%;
 	}
 
 }
@@ -76,49 +75,52 @@
 .login-form__input-before--password {
 	&:before {
 		content: '\e912';
+		font-size: 18px;
+		top: 46%;
 	}
 
 }
 
 .login-form__input-text {
 	height: 40px;
-	padding: 0 12px;
+	padding: 0 10px;
 	flex-grow: 1;
 	border: none;
-	// background: $mainColorLight;
 	z-index: 10;
 
     &:focus {
       outline:none;
     }
 
-	&.error {
-		// border: 1px solid $errorColor;
-	}
-
-
-
 }
 
 .login-form__links-wrap {
     width: 100%;
-    padding: 20px;
+    padding: 5px 20px;
 
 }
 
 .login-form__link {
 	font-family: $proximaSb;
-	@include link(none, 14px, 24px, normal, $welcomeLinkColor, $welcomeLinkColor, $welcomeLinkColor);
+	@include link(none, 14px, 24px, normal, $accentColor, $accentColorHover, $accentColorActive);
+	transition: $transition;
 }
 
-.login-form__button {
-	font-family: $panton;
-	@include link(none, 14px, false, normal, $lightColor, $lightColor, $lightColor);
-	background-color: $buttonColor;
-	width: 100%;
-	border-radius: 20px;
-	height: 40px;
-    text-align: center;
-    line-height: 40px;
-    display: block;
+.login-form {
+	.button {
+		width: 100%;
+	    text-align: center;
+	    display: block;		
+		margin-top: 10px;
+	}
+}
+
+.login-form__text {
+	font-family: $proximaLt;
+	@include font(14px, 14px, $darkColor, normal);
+	margin: 5px 0;
+}
+
+.login-form__text--centered {
+	text-align: center;
 }

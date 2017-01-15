@@ -6,5 +6,6 @@
 }
 
 .welcome-footer__copyright {
+	font-family: $proximaLt;
 	@include font(16px, 24px, $lightColor, normal);
 }

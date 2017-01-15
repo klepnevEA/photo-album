@@ -14,7 +14,7 @@ section.welcome
 						input.login-form__input-text(type="text" name="password" placeholder="Пароль")
 					.login-form__links-wrap
 						a.login-form__link(href="/forget.html") Забыли пароль?
-						a#submitLogin.login-form__button(href="#") Войти
+						a#submitLogin.button.button--submit(href="#") Войти
 						p.login-form__text Нет аккаунта? #[a#flipToRegistration.login-form__link(href="/registration.html") Зарегиcтрироваться]
 		.welcome__back
 			header.welcome-header
@@ -32,5 +32,5 @@ section.welcome
 						input.login-form__input-text(type="text" name="password" placeholder="Пароль")
 					.login-form__links-wrap
 						p.login-form__text Ваши данные остаются строго конфиденциальны
-						a#submitRegistration.login-form__button(href="#") Создать аккаунт
+						a#submitRegistration.button.button--submit(href="#") Создать аккаунт
 						p.login-form__text Уже зарегистрированы? #[a#flipToLogin.login-form__link(href="/welcome.html") Войти]

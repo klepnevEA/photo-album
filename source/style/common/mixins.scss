@@ -49,10 +49,10 @@
 
 @mixin link($text-decoration: false, $font-size: false, $line-height: false, $font-weight: false, $color: false, $color-hover: false, $color-active: false) {
     @if $text-decoration {text-decoration: $text-decoration;}
-    @if $font-size {@include font($font-size, '', '', '');}
-    @if $line-height {@include font('', $line-height, '', '');}
-    @if $font-weight {@include font('', '', '', $font-weight);}
-    @if $color {@include font('', '', $color, '');}
+    @if $font-size {font-size: $font-size;}
+    @if $line-height {line-height: $line-height;}
+    @if $font-weight {font-weight: $font-weight;}
+    @if $color {color: $color;}
     @if $color-hover {&:hover {color: $color-hover;}}
     @if $color-active {&:active {color: $color-active;}}
 }

@@ -10,10 +10,15 @@
 }
 
 .welcome-header__h1 {
-	@include font(42px, 21px, $lightColor, normal);
+	font-family: $panton;
+	@include font(42px, 42px, $lightColor, normal);
+	margin-top: 0;
+	margin-bottom: 25px;
 }
 
 .welcome-header__h3 {
 	font-family: $proximaLt;
 	@include font(16px, 24px, $lightColor, normal);
+	margin-top: 0;
+	margin-bottom: 25px;
 }

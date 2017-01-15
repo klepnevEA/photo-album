@@ -1,7 +1,7 @@
 // Colors
 $lightColor: #ffffff;
 $darkColor: #323232;
-$greyColor: lightgrey;
+$greyColor: rgba($darkColor, .2);
 $buttonColor: #28bbf0;
 $bgLightColor: #f1f1f1;
 $bgErrorColor: #ffe3e3;
@@ -10,10 +10,9 @@ $blueColor: #28bbf0;
 $grayColor: #d1d1d1;
 $accentColor: $blueColor;
 
-// Welcome Colors
-$welcomeOverlayColor: rgba(#000000, 0.15);
-$welcomeBorderColor: $greyColor;
-$welcomeLinkColor: deepskyblue;
+// Hover/Active Colors
+$accentColorHover: darken($accentColor, 10%);
+$accentColorActive: darken($accentColor, 20%);
 
 //Others
 $transition: all ease .3s;
