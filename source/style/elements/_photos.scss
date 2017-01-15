@@ -4,12 +4,20 @@
     box-sizing: border-box;
     text-align: center;
 
+  @include phone {
+    padding: 60px 0 40px;
+  }
+
     &__title {
         font-family: $panton;
         @include font (42px, 42px, $darkColor, normal)
         padding: 0;
         margin: 0 0 30px 0;
         text-align: left;
+
+        @include phone {
+          text-align: center;
+        }
     }
 
     &__list {
@@ -22,9 +30,21 @@
 
     &__item {
         margin: 0 0 20px 20px;
-        width: calc(100%/3 - 20px);
+        width: calc(100%/4 - 20px);
         list-style-type: none;
         display: inline-block;
+
+        @include hd {
+          width: calc(100%/3 - 20px);
+        }
+
+        @include desktop {
+          width: calc(100%/2 - 20px);
+        }
+
+        @include custom {
+          width: calc(100%);
+        }
     }
 
     &__image-link {

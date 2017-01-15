@@ -14,10 +14,45 @@ body {
     position: relative;
 }
 
+html {
+
+  @include desktop {
+    font-size:15px;
+  }
+
+  @include laptop {
+    font-size:14px;
+  }
+
+  @include tablet {
+    font-size:13px;
+  }
+
+}
+
 .container {
-    width: 90%;
-    max-width: 1000px;
+    width: 1580px;
     margin: 0 auto;
+
+    @include hd {
+      width:1180px;
+    }
+
+    @include desktop {
+      width:960px;
+    }
+
+    @include laptop {
+      width:712px;
+    }
+
+    @include custom {
+      width:480px;
+    }
+
+    @include phone {
+      width:80%;
+    }
 
 }
 

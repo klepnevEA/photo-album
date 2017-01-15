@@ -8,12 +8,20 @@
   padding:60px 60px 40px;
   box-sizing: border-box;
 
+  @include phone {
+    padding: 60px 0 40px;
+  }
+
   &__page-title {
     font-family: $panton;
     @include font (42px, 42px, $darkColor, normal)
     padding: 0;
     margin: 0 0 30px 0;
     text-align: left;
+
+    @include phone {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -25,7 +33,7 @@
 
   &__item {
     margin:0 0 20px 20px;
-    width:calc(100%/3 - 20px);
+    width:calc(100%/5 - 20px);
     list-style-type:none;
     display:inline-block;
     position: relative;
@@ -33,6 +41,18 @@
     &:hover .albums__info {
       opacity:1;
       transform: scale(1);
+    }
+
+    @include hd {
+      width: calc(100%/4 - 20px);
+    }
+
+    @include desktop {
+      width: calc(100%/2 - 20px);
+    }
+
+    @include custom {
+      width: calc(100%);
     }
   }
 
@@ -122,7 +142,7 @@
     top:0;
     left:0;
     right:0;
-    height:280px;
+    bottom:0;
     background-color:rgba(0,0,0,0.6);
     z-index:10;
 
@@ -132,6 +152,10 @@
       line-height:24px;
       color:#fff;
       margin:50% 20px 0 20px;
+
+      @include custom {
+        margin:40% 20px 0 20px;
+      }
     }
 
     &-count {

@@ -83,6 +83,12 @@
   }
 }
 
+@mixin custom {
+  @media screen and (max-width:590px) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media screen and (max-width:$phone-width) {
     @content;

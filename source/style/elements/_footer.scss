@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include tablet {
+    flex-wrap:wrap;
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -27,12 +31,25 @@
     line-height: 24px;
     color: $lightColor;
     z-index: 10;
+
+    @include tablet {
+      width:100%;
+      text-align:center;
+      order:2;
+      padding:5px 0;
+    }
   }
 
   &__col-center {
     width: 10%;
     text-align: center;
     z-index: 10;
+
+    @include tablet {
+      width:100%;
+      order:1;
+      padding:10px 0;
+    }
   }
 
   &__arrow {
@@ -42,6 +59,7 @@
     margin-top: 10px;
     opacity: 0.8;
     z-index: 10;
+    text-decoration: none;
 
     &:hover {
       opacity: 0.4;
@@ -57,6 +75,13 @@
     line-height: 24px;
     color: rgba($lightColor, 0.6);
     z-index: 10;
+
+    @include tablet {
+      width:100%;
+      text-align:center;
+      order:3;
+      padding:5px 0 10px;
+    }
   }
 
 }
