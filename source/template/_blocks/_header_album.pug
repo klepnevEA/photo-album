@@ -1,15 +1,24 @@
+- // Переменные, которые мы получаем из условного объекта "Альбом" базы данных
+
+- var authorSrc = '/assets/img/default_avatar.jpg' // фотография автора
+- var authorLink = '#' // ссылка на страницу автора
+- var authorName = 'Автор альбома' // имя автора
+- var photosCount = 18 // кол-во фотографий
+- var commentsCount = 12 // кол-во комментариев
+- var likesCount = 20 // кол-во лайков
+- var albumTitle = 'Лесные прогулки' // название альбома
+- var albumDescription = 'Фотографии природы, леса, енотов и оленей. Как прекрасно сойти на дальней станции и пройтись по полю босиком. И чтобы никто не беспокоил бродить влюбленным в тишину. Запах меда, лесных оленей и енотов будоражит утро' // описание на альбома
+
 header.header.header--album
     .header__main
         .user.user--mini
-            .user__logo
-            h3.user__name Имя Фамилия
+            a.user__link(href="authorLink")
+                .user__logo
+                    img(src=authorSrc, alt=authorName, title=authorName)
+                h3.user__name #{authorName}
         .albums-header
-            h1.albums-header__title Лесные прогулки
-            h5.albums-header__description.
-                Фотографии природы, леса, енотов и оленей. Как прекрасно сойти на
-                дальней станции и пройтись по полю босиком. И чтобы никто не беспокоил
-                бродить влюбленным в тишину. Запах меда, лесных оленей и енотов будоражит
-                утро
+            h1.albums-header__title #{albumTitle}
+            h5.albums-header__description #{albumDescription}
         .controls
             a.button.button--menu.button--home(href="/") Вернуться
             a.button.button--menu.button--edit#albumHeaderEditButton(href="#") Редактировать
@@ -17,11 +26,11 @@ header.header.header--album
         .albums-stat
             ul.albums-stat__list
                 li.albums-stat__item
-                    span.albums-stat__count#albumStatPhotosCount 18
+                    span.albums-stat__count#albumStatPhotosCount #{photosCount}
                     span.albums-stat__text#albumStatPhotosText Фотографий
                 li.albums-stat__item
-                    span.albums-stat__count#albumStatLikesCount 12
+                    span.albums-stat__count#albumStatLikesCount #{likesCount}
                     span.albums-stat__text#albumStatLikesText Лайков
                 li.albums-stat__item
-                    span.albums-stat__count#albumStatCommentsCount 4
+                    span.albums-stat__count#albumStatCommentsCount #{commentsCount}
                     span.albums-stat__text#albumStatCommentsText Комментария

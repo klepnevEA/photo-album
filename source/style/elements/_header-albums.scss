@@ -4,35 +4,53 @@
     padding: 20px 0 0 90px;
     font-size: 0;
 
-    &--slider {
-      padding:0;
-      margin:0;
+    &.user {
+        height: 52px;
+        margin: 20px 0;
+        padding: 0 0 0 80px;
+    }
 
-      .user__name {
-        color: $darkColor;
-      }
+    &--slider {
+        padding: 0;
+        margin: 0;
+
+        .user__name {
+            color: $darkColor;
+        }
+
+    }
+
+    .user__link {
+        display: flex;
+        text-decoration: none;
+
+        &:hover {
+            .user__name {
+                color: $accentColor;
+            }
+
+        }
+
     }
 
     .user__logo {
-        display: inline-block;
         height: 55px;
         width: 55px;
         min-width: 55px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url('../img/default_avatar.jpg');
         vertical-align: middle;
     }
 
     .user__name {
         display: inline-block;
-        margin-left: 20px;
-        font-family: 'Panton', Arial, sans-serif;
+        margin: 0 0 0 20px;
+        font-family: $panton;
         font-size: 16px;
-        line-height: 21px;
-        color: #fff;
+        line-height: 20px;
+        color: $lightColor;
         vertical-align: middle;
+        height: auto;
+        display: flex;
+        align-items: center;
 
         &--photo {
             color: #343434;

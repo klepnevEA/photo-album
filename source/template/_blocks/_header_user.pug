@@ -1,12 +1,17 @@
+- // Переменные, которые мы получаем из условного объекта "Пользователь" базы данных
+
+- var userSrc = '/assets/img/default_avatar.jpg' // фотография пользователя
+- var userName = 'Автор альбома' // имя пользователя
+- var userDescription = 'Я веб-разработчик. Мне 24 года. Люблю путешествия, кодинг, фриланс и активный отдых' // описание пользователя
+
 header.header.header--main
     .header__main
         .user
             .user__logo
+                img(src=userSrc, alt=userName, title=userName)
             .user__title
-                h3.user__name Имя Фамилия
-                h5.user__desc.
-                    Я веб-разработчик. Мне 24 года.
-                    Люблю путешествия, кодинг, фриланс и активный отдых
+                h3.user__name #{userName}
+                h5.user__desc #{userDescription}
                 include socials
         .controls
             a.button.button--menu.button--home(href="/") Вернуться
