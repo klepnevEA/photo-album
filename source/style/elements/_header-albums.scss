@@ -1,3 +1,51 @@
+.header--album {
+    .header__main {
+        display: block;
+        position: relative;
+    }
+
+    .user--mini.user {
+        @include tablet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-left: 20px;
+        }
+
+        @include phone {
+            flex-direction: row;
+        }
+
+    }
+
+    .albums-header {
+        @include tablet {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include phone {
+            width: 90%;
+            padding-top: 80px;
+        }
+
+    }
+
+    .controls {
+        @include tablet {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-right: 20px;
+        }
+        @include phone {
+            display: none;
+        }
+
+    }
+
+}
+
 .user--mini {
     width: 25%;
     margin: 0;
