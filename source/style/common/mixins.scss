@@ -58,28 +58,33 @@
 }
 
 // Media queries mixins
-@mixin mobile {
-    @media (max-width: #{$mobile-width}) {
-        @content;
-    }
-}
-@mixin tablet {
-    @media (max-width: #{$desktop-width - 1px}) {
-        @content;
-    }
-}
-@mixin portrait {
-    @media (orientation: portrait) {
-        @content;
-    }
-}
-@mixin desktop {
-    @media (min-width: #{$desktop-width}) and (max-width: #{$hd-width - 1px}) {
-        @content;
-    }
-}
+
 @mixin hd {
-    @media (min-width: #{$hd-width}) {
-        @content;
-    }
+  @media screen and (max-width:$hd-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width:$desktop-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width:$laptop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width:$tablet-width) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width:$phone-width) {
+    @content;
+  }
 }
